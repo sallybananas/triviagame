@@ -1,0 +1,110 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   .jumbotron {
+    box-sizing: border-box;
+    /* height: 600px; */
+    height:auto;
+    padding:0px;
+    background-color: rgba(255, 255, 255, 0.66);
+  }
+  
+  .main-button-container {
+    margin-top: 175px;
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1{
+    -webkit-filter: drop-shadow(1px 1px 0 white)
+    drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white)
+    drop-shadow(-1px -1px 0 white);
+
+    filter: drop-shadow(1px 1px 0 white) 
+    drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white)
+    drop-shadow(-1px -1px 0 white);  
+  }
+  .timer-p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #F37D1F
+    -webkit-filter: drop-shadow(1px 1px 0 white)
+    drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white)
+    drop-shadow(-1px -1px 0 white);
+
+    filter: drop-shadow(1px 1px 0 white) 
+    drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white)
+    drop-shadow(-1px -1px 0 white);
+}
+  
+  .answer:hover {
+    background: #F37D1F;
+  }
+  
+  .answer {
+    padding-top: 7px;
+    height: 45px;
+    color: black;
+    /* font-weight: bold; */
+    padding-left: 14px;
+    /* background-color: white; */
+    border-radius: 4px;
+  }
+  .tn{  
+      padding-top: 10px;
+      -webkit-filter: drop-shadow(1px 1px 0 black)
+      drop-shadow(-1px 1px 0 black)
+      drop-shadow(1px -1px 0 black)
+      drop-shadow(-1px -1px 0 black);
+  
+      filter: drop-shadow(1px 1px 0 black) 
+      drop-shadow(-1px 1px 0 black)
+      drop-shadow(1px -1px 0 black)
+      drop-shadow(-1px -1px 0 black);
+  }
+  .img-wrong {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-filter: drop-shadow(2px 2px 0 black)
+    drop-shadow(-2px 2px 0 black)
+    drop-shadow(2px -2px 0 black)
+    drop-shadow(-2px -2px 0 black);
+
+    filter: drop-shadow(2px 2px 0 black) 
+    drop-shadow(-2px 2px 0 black)
+    drop-shadow(2px -2px 0 black)
+    drop-shadow(-2px -2px 0 black);
+  }
+  
+  .first-answer {
+    margin-top: 20px;
+  }
+  
+  .reset-button {
+    margin-top: 40px;
+  }
+  
+  .summary-correct {
+    margin-top: 40px;
+  }
+  
+  body {
+    height:100%;
+    font-weight:bold;
+    margin: 20px;
+  }
+  .btn-primary {
+    color: #fff;
+    background-color: #F37D1F;
+    border-color: black;
+    border-width: 1px;
+}
+  
