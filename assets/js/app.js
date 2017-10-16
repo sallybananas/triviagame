@@ -10,7 +10,7 @@ $(document).ready(function() {
     
     //Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
     
-    $("body").on(["touchend", "click"], ".start-button", function(event){
+    $("body").on(["touchend"&&"click"], ".start-button", function(event){
         event.preventDefault();
         
         generateHTML();
@@ -28,7 +28,7 @@ $(document).ready(function() {
     
     }); // Closes start-button click
     
-    $("body").on(["touchend", "click"], ".answer", function(event){
+    $("body").on(["touchend"&&"click"], ".answer", function(event){
         //answeredQuestion = true;
         event.preventDefault()
         selectedAnswer = $(this).text();
@@ -79,7 +79,7 @@ $(document).ready(function() {
     //     }
     // }); // Close .answer click
     
-    $("body").on(["touchend", "click"], ".reset-button", function(event){
+    $("body").on(["touchend"&&"click"], ".reset-button", function(event){
         event.preventDefault()
         resetGame();
     }); // Closes reset-button touch
@@ -89,7 +89,7 @@ $(document).ready(function() {
     //     resetGame();
     // }); // Closes reset-button click
     
-    });  //  Closes jQuery wrapper
+    // });  //  Closes jQuery wrapper
     
     function generateLossDueToTimeOut() {
         unansweredTally++;
