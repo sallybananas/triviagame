@@ -10,7 +10,7 @@ $(document).ready(function() {
     
     //Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
     
-    $("body").on("touchend", ".start-button", function(event){
+    $("body").on(["touchend", "click"], ".start-button", function(event){
         event.preventDefault();
         
         generateHTML();
@@ -19,16 +19,16 @@ $(document).ready(function() {
     
     });  // Closes start-button click
     
-    $("body").on("click", ".start-button", function(event){
-        // event.preventDefault();
+    // $("body").on("click", ".start-button", function(event){
+    //     // event.preventDefault();
         
-        generateHTML();
+    //     generateHTML();
     
-        timerWrapper();
+    //     timerWrapper();
     
     }); // Closes start-button click
     
-    $("body").on("touchend", ".answer", function(event){
+    $("body").on(["touchend", "click"], ".answer", function(event){
         //answeredQuestion = true;
         event.preventDefault()
         selectedAnswer = $(this).text();
@@ -45,49 +45,49 @@ $(document).ready(function() {
         }
     }); // Close .answer touch
 
-    $("body").on("touchend", ".answer", function(event){
-        //answeredQuestion = true;
-        event.preventDefault()
-        selectedAnswer = $(this).text();
-        if(selectedAnswer === correctAnswers[questionCounter]) {
-            //alert("correct");
+    // $("body").on("click", ".answer", function(event){
+    //     //answeredQuestion = true;
+    //     event.preventDefault()
+    //     selectedAnswer = $(this).text();
+    //     if(selectedAnswer === correctAnswers[questionCounter]) {
+    //         //alert("correct");
     
-            clearInterval(theClock);
-            generateWin();
-        }
-        else {
-            //alert("wrong answer!");
-            clearInterval(theClock);
-            generateLoss();
-        }
-    }); // Close .answer touch
+    //         clearInterval(theClock);
+    //         generateWin();
+    //     }
+    //     else {
+    //         //alert("wrong answer!");
+    //         clearInterval(theClock);
+    //         generateLoss();
+    //     }
+    // }); // Close .answer touch
 
-    $("body").on("click", ".answer", function(event){
-        //answeredQuestion = true;
-        // event.preventDefault()
-        selectedAnswer = $(this).text();
-        if(selectedAnswer === correctAnswers[questionCounter]) {
-            //alert("correct");
+    // $("body").on("click", ".answer", function(event){
+    //     //answeredQuestion = true;
+    //     // event.preventDefault()
+    //     selectedAnswer = $(this).text();
+    //     if(selectedAnswer === correctAnswers[questionCounter]) {
+    //         //alert("correct");
     
-            clearInterval(theClock);
-            generateWin();
-        }
-        else {
-            //alert("wrong answer!");
-            clearInterval(theClock);
-            generateLoss();
-        }
-    }); // Close .answer click
+    //         clearInterval(theClock);
+    //         generateWin();
+    //     }
+    //     else {
+    //         //alert("wrong answer!");
+    //         clearInterval(theClock);
+    //         generateLoss();
+    //     }
+    // }); // Close .answer click
     
-    $("body").on("touchend", ".reset-button", function(event){
+    $("body").on(["touchend", "click"], ".reset-button", function(event){
         event.preventDefault()
         resetGame();
     }); // Closes reset-button touch
 
-    $("body").on("click", ".reset-button", function(event){
-        // event.preventDefault()
-        resetGame();
-    }); // Closes reset-button click
+    // $("body").on("click", ".reset-button", function(event){
+    //     // event.preventDefault()
+    //     resetGame();
+    // }); // Closes reset-button click
     
     });  //  Closes jQuery wrapper
     
