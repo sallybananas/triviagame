@@ -10,8 +10,17 @@ $(document).ready(function() {
     
     //Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
     
+    $("body").on("touchend", ".start-button", function(event){
+        event.preventDefault();
+        clickSound.play();
+        generateHTML();
+    
+        timerWrapper();
+    
+    });  // Closes start-button click
+    
     $("body").on("click", ".start-button", function(event){
-        // event.preventDefault();
+        event.preventDefault();
         clickSound.play();
         generateHTML();
     
@@ -19,6 +28,40 @@ $(document).ready(function() {
     
     }); // Closes start-button click
     
+    $("body").on("touchend", ".answer", function(event){
+        //answeredQuestion = true;
+        clickSound.play();
+        selectedAnswer = $(this).text();
+        if(selectedAnswer === correctAnswers[questionCounter]) {
+            //alert("correct");
+    
+            clearInterval(theClock);
+            generateWin();
+        }
+        else {
+            //alert("wrong answer!");
+            clearInterval(theClock);
+            generateLoss();
+        }
+    }); // Close .answer touch
+
+    $("body").on("touchend", ".answer", function(event){
+        //answeredQuestion = true;
+        clickSound.play();
+        selectedAnswer = $(this).text();
+        if(selectedAnswer === correctAnswers[questionCounter]) {
+            //alert("correct");
+    
+            clearInterval(theClock);
+            generateWin();
+        }
+        else {
+            //alert("wrong answer!");
+            clearInterval(theClock);
+            generateLoss();
+        }
+    }); // Close .answer touch
+
     $("body").on("click", ".answer", function(event){
         //answeredQuestion = true;
         clickSound.play();
@@ -36,6 +79,11 @@ $(document).ready(function() {
         }
     }); // Close .answer click
     
+    $("body").on("touchend", ".reset-button", function(event){
+        clickSound.play();
+        resetGame();
+    }); // Closes reset-button touch
+
     $("body").on("click", ".reset-button", function(event){
         clickSound.play();
         resetGame();
