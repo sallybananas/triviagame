@@ -12,7 +12,7 @@ $(document).ready(function() {
     
     $("body").on("touchend", ".start-button", function(event){
         event.preventDefault();
-        clickSound.play();
+        
         generateHTML();
     
         timerWrapper();
@@ -21,7 +21,7 @@ $(document).ready(function() {
     
     $("body").on("click", ".start-button", function(event){
         event.preventDefault();
-        clickSound.play();
+        
         generateHTML();
     
         timerWrapper();
@@ -30,7 +30,7 @@ $(document).ready(function() {
     
     $("body").on("touchend", ".answer", function(event){
         //answeredQuestion = true;
-        clickSound.play();
+        event.preventDefault()
         selectedAnswer = $(this).text();
         if(selectedAnswer === correctAnswers[questionCounter]) {
             //alert("correct");
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     $("body").on("touchend", ".answer", function(event){
         //answeredQuestion = true;
-        clickSound.play();
+        event.preventDefault()
         selectedAnswer = $(this).text();
         if(selectedAnswer === correctAnswers[questionCounter]) {
             //alert("correct");
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
     $("body").on("click", ".answer", function(event){
         //answeredQuestion = true;
-        clickSound.play();
+        event.preventDefault()
         selectedAnswer = $(this).text();
         if(selectedAnswer === correctAnswers[questionCounter]) {
             //alert("correct");
@@ -80,12 +80,12 @@ $(document).ready(function() {
     }); // Close .answer click
     
     $("body").on("touchend", ".reset-button", function(event){
-        clickSound.play();
+        event.preventDefault()
         resetGame();
     }); // Closes reset-button touch
 
     $("body").on("click", ".reset-button", function(event){
-        clickSound.play();
+        event.preventDefault()
         resetGame();
     }); // Closes reset-button click
     
