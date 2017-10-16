@@ -20,7 +20,7 @@ $(document).ready(function() {
     });  // Closes start-button click
     
     $("body").on("click", ".start-button", function(event){
-        event.preventDefault();
+        // event.preventDefault();
         
         generateHTML();
     
@@ -64,7 +64,7 @@ $(document).ready(function() {
 
     $("body").on("click", ".answer", function(event){
         //answeredQuestion = true;
-        event.preventDefault()
+        // event.preventDefault()
         selectedAnswer = $(this).text();
         if(selectedAnswer === correctAnswers[questionCounter]) {
             //alert("correct");
@@ -85,7 +85,7 @@ $(document).ready(function() {
     }); // Closes reset-button touch
 
     $("body").on("click", ".reset-button", function(event){
-        event.preventDefault()
+        // event.preventDefault()
         resetGame();
     }); // Closes reset-button click
     
