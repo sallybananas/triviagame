@@ -19,7 +19,7 @@ $(document).ready(function() {
     
     // });  // Closes start-button click
     
-    $("body").on("click touchend", ".start-button", function(event){
+    $("body").on("click touchend tap", ".start-button", function(event){
         // event.preventDefault();
         
         generateHTML();
@@ -45,7 +45,7 @@ $(document).ready(function() {
     //     }
     // }); // Close .answer touch
 
-    $("body").on("click touchend", ".answer", function(event){
+    $("body").on("click touchend tap", ".answer", function(event){
         //answeredQuestion = true;
         event.preventDefault()
         selectedAnswer = $(this).text();
@@ -68,7 +68,7 @@ $(document).ready(function() {
     //     resetGame();
     // }); // Closes reset-button touch
 
-    $("body").on("click touchend", ".reset-button", function(event){
+    $("body").on("click touchend tap", ".reset-button", function(event){
         // event.preventDefault()
         resetGame();
     }); // Closes reset-button click
